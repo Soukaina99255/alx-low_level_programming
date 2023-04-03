@@ -1,1 +1,1 @@
-hello world c lang
+pointer to a pointer 
