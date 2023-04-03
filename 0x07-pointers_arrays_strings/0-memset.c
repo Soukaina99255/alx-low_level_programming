@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _memset  -file memory with a constant byte @b
+ * _memset  -file memory with a constant byte
  * @n: bytes
  * @s: memory area
  * @b: constant byte
