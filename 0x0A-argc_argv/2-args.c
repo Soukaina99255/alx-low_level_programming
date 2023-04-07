@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * mainc - print all argumments it recives
+ * main - print all argumments it recives
  * @argc: count argumments
  * @argv: array of argumments
  *
