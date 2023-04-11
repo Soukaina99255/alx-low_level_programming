@@ -3,47 +3,39 @@
 #include <stdlib.h>
 
 /**
- * _strlen - find length of a string
- * @s: string
- * Return: int
- */
-
-int _strlen(char *s)
-{
-	int size = 0;
-
-	for (; s[size] != '\0'; size++)
-	return (size);
-}
-
-/**
  * str_concat - contactenates two strings
- * @s1: string 1
- * @s2: string 2
- * Return: pointer
+ * @s1: string to conctenate
+ * @s2: other string to conctenate
+ *
+ * Return: pointer to the new string created (Sucess),
+ * or NULL (Error)
  */
 
 char *str_concat(char *s1, char *s2)
 {
-	int size1, size2, i;
 	char *h;
+	unsigned int i = 0, j = 0, len1 = 0, len2 = 0;
 
-	if (s1 == NULL)
-		s1 = '\0';
-	if (s2 == NULL)
-		s2 = '\0';
-	size1 = _strlen(s1);
-	size2 = _strlen(s2);
-	h = malloc((size1 + size2) * sizeof(char) + 1);
-	if (h == 0)
-		return (0);
-	for (i = 0; i <= size1 + size2; i++)
+	while (s1 && s1[len1])
+		len1++;
+	while (s2 && s2[len2])
+		len2++;
+	h = malloc(sizeof(char) * (len1 + len2 + 1));
+	if (h == NULL)
+		return (NULL);
+	i = 0;
+	j = 0;
+
+	if (s1)
 	{
-		if (i < size1)
-			h[i] = s1[i];
-		else
-			h[i] = s2[i - size1];
+		while (i < (len1 + len2))
+		{
+			h[i] = s2[j];
+			i++;
+			j++;
+		}
 	}
 	h[i] = '\0';
+
 	return (h);
 }
