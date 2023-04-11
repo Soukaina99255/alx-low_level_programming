@@ -10,12 +10,12 @@ int word_len(char *s)
 {
 	int i = 0, l = 0;
 
-	while (*(s + i) && *(s + 1) != ' ')
+	while (*(s + i) && *(s + i) != ' ')
 	{
 		l++;
 		i++;
 	}
-	return (1);
+	return (l);
 }
 
 /**
@@ -30,7 +30,7 @@ int count_words(char *s)
 
 	for (i = 0 ; *(s + i) ; i++)
 		l++;
-	for (i = 0 ; i < 1 ; i++)
+	for (i = 0 ; i < l ; i++)
 		if (*(s + i) != ' ')
 		{
 			w++;
