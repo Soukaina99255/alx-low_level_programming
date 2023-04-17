@@ -22,7 +22,7 @@ int _strlen(char *s)
 }
 
 /**
- * *strcpy - copies the string pointed to by scr
+ * *_strcpy - copies the string pointed to by scr
  * including the terminating null byte (\0)
  * to the buffer pointed to by dest
  * @dest: pointer to the buffer in which we copy the string
@@ -61,8 +61,9 @@ char *_strcpy(char *dest, char *src)
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *dog;
 	int len1, len2;
+
+	dog_t *dog;
 
 	len1 = _strlen(name);
 	len2 = _strlen(owner);
