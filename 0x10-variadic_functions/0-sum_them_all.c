@@ -6,7 +6,7 @@
  * @n: the number of parameters passed to the function
  * @...: a variable number of parameters to calculate the sum of
  *
- * Return: if n == 0 - 0
+ * Return: if n == 0 - 0.
  *         othrwhise - the of all parameters
  */
 
